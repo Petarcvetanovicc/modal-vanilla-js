@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 90vw;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 0;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  color: #1e293b;
+}
+
+.open-modal-btn {
+  display: block;
+  padding: 4px 12px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  background-color: #3b82f6;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.open-modal-btn:hover {
+  background-color: #fff;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 139, 187, 0.5);
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+
+  display: grid;
+  place-items: center;
+}
+
+.show-modal {
+  visibility: visible;
+}
+
+.modal-container {
+  width: 90vw;
+  max-width: 620px;
+  /* width: 550px;
+  height: 250px; */
+  background-color: #fff;
+
+  position: relative;
+  padding: 6rem 0;
+  border-radius: 12px;
+
+  display: grid;
+  place-items: center;
+  /* margin-top: 170px;
+  margin-left: 500px; */
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  color: #dc2626;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.close-modal-btn:hover {
+  transform: scale(1.4);
+  color: #f87171;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.close-modal-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.close-modal-btn span {
+  font-size: 2rem;
+}

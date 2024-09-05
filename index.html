@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <h1>Modal Project</h1>
+        <button class="open-modal-btn">OPEN MODAL</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <button class="close-modal-btn">
+          <span><i class="fa-solid fa-xmark"></i></span>
+        </button>
+        <h2>Modal Content</h2>
+      </div>
+    </div>
+
+    <script>
+      let openBtn = document.querySelector('.open-modal-btn')
+      let closeBtn = document.querySelector('.close-modal-btn')
+
+      let modalOverlay = document.querySelector('.modal-overlay')
+
+      openBtn.addEventListener('click', function () {
+        modalOverlay.classList.add('show-modal')
+      })
+
+      closeBtn.addEventListener('click', function () {
+        modalOverlay.classList.remove('show-modal')
+      })
+    </script>
+  </body>
+</html>
